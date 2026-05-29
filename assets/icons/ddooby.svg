@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <g fill="none" stroke="#23459c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- body -->
+    <path d="M128 70 V220" />
+    <path d="M108 220 H148" />
+    <rect x="108" y="36" width="40" height="34" rx="10" />
+
+    <!-- shoulders -->
+    <path d="M82 56 H108" />
+    <path d="M148 56 H174" />
+
+    <!-- left arm -->
+    <circle cx="68" cy="56" r="18" />
+    <path d="M68 74 V118" />
+    <circle cx="68" cy="132" r="14" />
+    <path d="M68 146 V196" />
+    <path d="M54 196 H82" />
+    <path d="M68 196 L60 230" />
+    <path d="M68 196 L76 230" />
+
+    <!-- right arm -->
+    <circle cx="188" cy="56" r="18" />
+    <path d="M188 74 V118" />
+    <circle cx="188" cy="132" r="14" />
+    <path d="M188 146 V196" />
+    <path d="M174 196 H202" />
+    <path d="M182 196 V230" />
+    <path d="M194 196 V230" />
+
+  </g>
+</svg>

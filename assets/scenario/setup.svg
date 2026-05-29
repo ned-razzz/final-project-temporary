@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" role="img" aria-labelledby="title desc">
+  <title id="title">SLAM 맵 생성 픽토그램</title>
+  <desc id="desc">서빙 로봇이 매장을 이동하며 SLAM 맵을 생성</desc>
+  <rect width="240" height="140" fill="#eef4ff"/>
+  <rect x="34" y="22" width="172" height="92" rx="6" fill="#ffffff" stroke="#1f2a44" stroke-width="5"/>
+  <path d="M72 22v34M112 22v24M152 22v34M34 70h48M118 70h88M72 92v22M152 82v32" stroke="#9aa8bd" stroke-width="4" stroke-linecap="round"/>
+  <rect x="46" y="36" width="25" height="18" rx="3" fill="#fff0f6" stroke="#d83f87" stroke-width="4"/>
+  <rect x="161" y="35" width="30" height="20" rx="3" fill="#fff0f6" stroke="#d83f87" stroke-width="4"/>
+  <rect x="47" y="84" width="24" height="16" rx="3" fill="#fff0f6" stroke="#d83f87" stroke-width="4"/>
+  <path d="M58 99c22-30 45-41 70-32 23 8 40-2 54-28" fill="none" stroke="#2856b6" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 9"/>
+  <rect x="104" y="70" width="52" height="31" rx="7" fill="#ffffff" stroke="#2856b6" stroke-width="6"/>
+  <circle cx="117" cy="106" r="7" fill="#1f2a44"/>
+  <circle cx="145" cy="106" r="7" fill="#1f2a44"/>
+  <path d="M130 70V51h21" stroke="#2856b6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M163 67c7-8 18-8 25 0M157 56c12-13 28-13 41 0" fill="none" stroke="#d83f87" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="130" cy="86" r="5" fill="#d83f87"/>
+</svg>

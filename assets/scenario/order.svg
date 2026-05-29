@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" role="img" aria-labelledby="title desc">
+  <title id="title">주문 픽토그램</title>
+  <desc id="desc">고객이 음성 키오스크에서 메뉴를 주문</desc>
+  <rect width="240" height="140" fill="#fff0f6"/>
+  <rect x="88" y="24" width="68" height="92" rx="8" fill="#ffffff" stroke="#d83f87" stroke-width="6"/>
+  <rect x="101" y="38" width="42" height="34" rx="4" fill="#eef4ff" stroke="#2856b6" stroke-width="4"/>
+  <path d="M104 88h36M104 101h22" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="174" cy="50" r="16" fill="#2856b6"/>
+  <path d="M174 72v24M156 120c5-15 14-22 18-22s13 7 18 22" stroke="#2856b6" stroke-width="7" stroke-linecap="round"/>
+  <path d="M58 48c-8 6-8 19 0 25M44 36c-16 16-16 39 0 55" fill="none" stroke="#d83f87" stroke-width="6" stroke-linecap="round"/>
+</svg>

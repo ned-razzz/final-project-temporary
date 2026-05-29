@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" role="img" aria-labelledby="title desc">
+  <title id="title">서빙 픽토그램</title>
+  <desc id="desc">주행 로봇이 완성 상품을 테이블로 전달</desc>
+  <rect width="240" height="140" fill="#fff0f6"/>
+  <path d="M35 105H205" stroke="#9aa8bd" stroke-width="4" stroke-linecap="round"/>
+  <rect x="53" y="70" width="62" height="32" rx="7" fill="#ffffff" stroke="#2856b6" stroke-width="6"/>
+  <circle cx="67" cy="107" r="8" fill="#1f2a44"/>
+  <circle cx="101" cy="107" r="8" fill="#1f2a44"/>
+  <path d="M83 70V48h28" stroke="#2856b6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="101" y="44" width="34" height="17" rx="4" fill="#d83f87"/>
+  <path d="M145 43h40M152 43v58M178 43v58M138 101h54" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/>
+  <path d="M125 88c11-4 18-11 21-22" fill="none" stroke="#d83f87" stroke-width="6" stroke-linecap="round"/>
+</svg>

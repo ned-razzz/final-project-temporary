@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" role="img" aria-labelledby="title desc">
+  <title id="title">제조 픽토그램</title>
+  <desc id="desc">양팔 로봇이 주문 상품을 제조</desc>
+  <rect width="240" height="140" fill="#eef4ff"/>
+  <rect x="92" y="30" width="56" height="38" rx="8" fill="#ffffff" stroke="#2856b6" stroke-width="6"/>
+  <circle cx="109" cy="49" r="5" fill="#2856b6"/>
+  <circle cx="131" cy="49" r="5" fill="#2856b6"/>
+  <path d="M120 30V17M120 17h18" stroke="#2856b6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M94 69 58 92M146 69l36 23" stroke="#2856b6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M54 94h36M150 94h36" stroke="#d83f87" stroke-width="7" stroke-linecap="round"/>
+  <rect x="74" y="100" width="92" height="18" rx="9" fill="#ffffff" stroke="#1f2a44" stroke-width="5"/>
+  <path d="M91 100c7-14 23-20 40-13 8 3 14 7 20 13" fill="none" stroke="#d83f87" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" role="img" aria-labelledby="title desc">
+  <title id="title">운영 픽토그램</title>
+  <desc id="desc">관리 화면에서 주문과 로봇 작업 상태를 통합 관제</desc>
+  <rect width="240" height="140" fill="#eef4ff"/>
+  <rect x="50" y="28" width="140" height="80" rx="8" fill="#ffffff" stroke="#2856b6" stroke-width="6"/>
+  <path d="M82 120h76M120 108v12" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/>
+  <rect x="68" y="46" width="35" height="16" rx="3" fill="#d83f87"/>
+  <rect x="68" y="72" width="78" height="10" rx="5" fill="#9aa8bd"/>
+  <rect x="68" y="88" width="55" height="10" rx="5" fill="#9aa8bd"/>
+  <circle cx="158" cy="54" r="13" fill="#2856b6"/>
+  <path d="M157 41v13l9 7" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
