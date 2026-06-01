@@ -733,6 +733,41 @@
       color: var(--secondary);
     }
 
+    .visual-multi--quad {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      height: auto;
+      overflow: visible;
+    }
+
+    .visual-multi--quad .quad-item {
+      position: relative;
+      margin: 0;
+      min-width: 0;
+    }
+
+    .visual-multi--quad .quad-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .visual-multi--quad .quad-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      padding: 4px 11px;
+      background: rgba(0, 0, 0, 0.66);
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1;
+      font-weight: 900;
+      border-radius: 8px;
+      z-index: 2;
+    }
+
     .map-legend {
       margin-left: 24px;
       display: flex;
@@ -775,9 +810,9 @@
     .legend-path {
       display: inline-block;
       width: 38px;
-      height: 7px;
-      border-radius: 4px;
-      background: #ff1a1a;
+      height: 10px;
+      border-radius: 3px;
+      background: #00e000;
       flex: 0 0 auto;
     }
 
@@ -1137,25 +1172,22 @@
                   </span>
                 </span>
               </h2>
-              <div class="visual-multi visual-multi--flow">
-                <figure class="flow-item">
-                  <img src="assets/demo/slam_4.png" alt="SLAM 협소 공간 주행 시연 1">
-                  <figcaption class="flow-caption">장애물 감지 및 경로 생성</figcaption>
+              <div class="visual-multi visual-multi--quad">
+                <figure class="quad-item">
+                  <span class="quad-label">path</span>
+                  <img src="assets/demo/nav_path.png" alt="SLAM 협소 공간 주행 경로 생성">
                 </figure>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <figure class="flow-item">
-                  <img src="assets/demo/slam_3.png" alt="SLAM 협소 공간 주행 시연 2">
-                  <figcaption class="flow-caption">좁은 통로 주행 시작</figcaption>
+                <figure class="quad-item">
+                  <span class="quad-label">1</span>
+                  <img src="assets/demo/nav_1.png" alt="SLAM 협소 공간 주행 시연 1">
                 </figure>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <figure class="flow-item">
-                  <img src="assets/demo/slam_2.png" alt="SLAM 협소 공간 주행 시연 3">
-                  <figcaption class="flow-caption">좁은 통로 주행 마무리</figcaption>
+                <figure class="quad-item">
+                  <span class="quad-label">2</span>
+                  <img src="assets/demo/nav_2.png" alt="SLAM 협소 공간 주행 시연 2">
                 </figure>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <figure class="flow-item">
-                  <img src="assets/demo/slam_1.png" alt="SLAM 협소 공간 주행 시연 4">
-                  <figcaption class="flow-caption">도착지 접근</figcaption>
+                <figure class="quad-item">
+                  <span class="quad-label">3</span>
+                  <img src="assets/demo/nav_3.png" alt="SLAM 협소 공간 주행 시연 3">
                 </figure>
               </div>
               <ul>
