@@ -314,6 +314,19 @@
       object-fit: contain;
     }
 
+    .overview-summary {
+      margin: 0 0 14px;
+      padding-left: 26px;
+      color: var(--dark);
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 800;
+    }
+
+    .overview-summary li + li {
+      margin-top: 4px;
+    }
+
     .description-text,
     .feature-head p {
       font-size: var(--copy-size);
@@ -361,6 +374,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
+      align-items: stretch;
     }
 
     .robot-block {
@@ -369,12 +383,12 @@
       overflow: hidden;
       background: var(--paper);
       display: grid;
-      grid-template-rows: auto 180px auto;
+      grid-template-rows: 72px 318px minmax(116px, auto);
     }
 
     .robot-name {
       margin: 0;
-      padding: 14px 18px 12px;
+      padding: 0 18px;
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       color: var(--text);
@@ -382,14 +396,61 @@
       line-height: 1.1;
       font-weight: 900;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .robot-kind {
+      color: var(--secondary);
+      font-size: 17px;
+      line-height: 1.12;
+      font-weight: 900;
     }
 
     .robot-copy {
-      padding: 18px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .robot-visual {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 72%, #eef3fa 100%);
+      overflow: hidden;
+      padding: 12px 16px 10px;
+    }
+
+    .robot-photo {
+      width: auto;
+      max-width: 86%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center bottom;
+      background: transparent;
+    }
+
+    .robot-photo.doby-photo {
+      height: 116%;
+      transform: translateY(11px);
+    }
+
+    .robot-photo.ddooby-photo {
+      height: 108%;
+      transform: translateY(10px);
     }
 
     .robot-copy p {
-      margin: 0 0 12px;
+      margin: 0;
     }
 
     .robot-block li {
@@ -615,6 +676,8 @@
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
       gap: 10px;
       min-height: 0;
+      height: 100%;
+      overflow: hidden;
     }
 
     .visual-multi--flow {
@@ -708,10 +771,10 @@
       flex: 0 0 auto;
     }
 
-    .robot-block > img,
     .visual-multi img {
       width: 100%;
       height: 100%;
+      max-height: 212px;
       display: block;
       object-fit: cover;
       border: 0;
@@ -875,6 +938,10 @@
       <aside class="left-sidebar">
         <section class="section">
           <h2 class="section-title">프로젝트 개요</h2>
+          <ul class="overview-summary">
+            <li>현장으로 이동하여 제공하는 로봇 자동화 식음료 서비스</li>
+            <li>주문부터 제조, 서빙까지 연결한 이동형 케이터링 서비스</li>
+          </ul>
           <img class="overview-image" src="assets/project_overview.png" alt="MOCA 프로젝트 개요">
         </section>
 
@@ -887,23 +954,23 @@
           <h2 class="section-title secondary">하드웨어 구성</h2>
           <div class="hardware-grid">
             <article class="robot-block">
-              <h3 class="robot-name">도비</h3>
-              <div class="placeholder" aria-label="도비 로봇 사진 placeholder">
-                <strong>도비 로봇 사진</strong>
+              <h3 class="robot-name">도비<span class="robot-kind">이동형 서빙 로봇</span></h3>
+              <div class="robot-visual">
+                <img class="robot-photo doby-photo" src="assets/doby.png" alt="도비 주행 로봇과 OMX 로봇팔">
               </div>
               <div class="robot-copy">
-                <p>주행 로봇 + OMX 로봇팔</p>
-                <p>서빙, 모객 담당</p>
+                <p>주행 베이스 + OMX 로봇팔</p>
+                <p>테이블 서빙·모객 동선 수행</p>
               </div>
             </article>
             <article class="robot-block">
-              <h3 class="robot-name">뚜비</h3>
-              <div class="placeholder" aria-label="뚜비 로봇 사진 placeholder">
-                <strong>뚜비 로봇 사진</strong>
+              <h3 class="robot-name">뚜비<span class="robot-kind">양팔 제조 로봇</span></h3>
+              <div class="robot-visual">
+                <img class="robot-photo ddooby-photo" src="assets/ddooby.png" alt="뚜비 OpenArm 양팔 로봇">
               </div>
               <div class="robot-copy">
-                <p>OpenArm 양팔 로봇 + Depth 카메라</p>
-                <p>Vision 기반 제조 담당</p>
+                <p>OpenArm 양팔 + Depth 카메라</p>
+                <p>Vision 기반 제조 작업 수행</p>
               </div>
             </article>
           </div>
@@ -911,7 +978,7 @@
 
         <section class="section">
           <h2 class="section-title secondary">기술 스택</h2>
-          <div class="tech-groups" aria-label="기능별 기술 스택">
+          <div class="tech-groups" aria-label="역할별 기술 스택">
             <article class="tech-group">
               <h3>환경</h3>
               <div class="tech-items">
@@ -922,14 +989,14 @@
               </div>
             </article>
             <article class="tech-group">
-              <h3>주문</h3>
+              <h3>UI</h3>
               <div class="tech-items">
                 <img class="tech-logo" src="assets/logo/pyqt6.png" alt="PyQt6">
                 <span class="tech-badge">HTML</span>
               </div>
             </article>
             <article class="tech-group">
-              <h3>제조</h3>
+              <h3>요리 로봇</h3>
               <div class="tech-items manufacturing-stack">
                 <img class="tech-logo wide" src="assets/logo/openarm.png" alt="OpenArm">
                 <img class="tech-logo" src="assets/logo/moveit.png" alt="MoveIt">
@@ -938,19 +1005,19 @@
               </div>
             </article>
             <article class="tech-group">
-              <h3>서빙</h3>
+              <h3>서빙 로봇</h3>
               <div class="tech-items">
                 <img class="tech-logo wide" src="assets/logo/lerobot.png" alt="LeRobot">
                 <img class="tech-logo" src="assets/logo/nav2.png" alt="Nav2">
-                <img class="tech-logo wide" src="assets/logo/Ultralytics YOLO26.png" alt="YOLO26">
+                <img class="tech-logo wide" src="assets/logo/ultralytics_yolo.svg" alt="YOLO26">
               </div>
             </article>
             <article class="tech-group">
               <h3>프로젝트 관리</h3>
               <div class="tech-items">
+                <img class="tech-logo" src="assets/logo/github.png" alt="GitHub">
                 <img class="tech-logo" src="assets/logo/confluence.png" alt="Confluence">
                 <img class="tech-logo" src="assets/logo/jira.png" alt="Jira">
-                <img class="tech-logo" src="assets/logo/slack.png" alt="Slack">
               </div>
             </article>
           </div>
@@ -1041,36 +1108,28 @@
             </article>
 
             <article class="feature-card">
-              <h2 class="section-title">서빙 모방학습</h2>
+              <h2 class="section-title">서빙 모방학습 (PickAndPlace)</h2>
               <div class="visual-multi">
-                <div class="placeholder">
-                  <span>[시연 이미지1.png]</span>
-                </div>
-                <div class="placeholder">
-                  <span>[시연 이미지2.png]</span>
-                </div>
+                <img src="assets/demo/serve_1.png" alt="서빙 모방학습 시연 1">
+                <img src="assets/demo/serve_2.png" alt="서빙 모방학습 시연 2">
               </div>
               <ul>
-                <li>조도 강건 데이터 증강(Light Augmentation): 다채로운 밝기 변화를 반영한 데이터 증강을 통해, 어떤 조도 환경에서도 왜곡 없이 강건하게 목표 행동을 추론</li>
-                <li>단일 환경-행동 매핑(1-Task, 1-Env): 태스크별로 하나의 특정 조건만 매핑하여 혼선 없이 목표 행동을 정밀하고 충실하게 재현</li>
-                <li>ACT Policy 기반 고효율 제어: SmolVLA 등 거대 비전언어행동(VLA) 모델 대비 연산량과 필요한 학습 데이터, 학습시간을 대폭 줄이면서도, 로봇팔의 떨림(Jittering)을 최소화한 고품질의 실시간 연속 추론 성능 확보</li>
+                <li>환경·위치 강건성 확보: 데이터 증강으로 형광등 플리커(Flicker) 노이즈 극복, 다양한 위치에서 수집된 데이터셋을 기반으로 물체 위치 변화에 대응</li>
+                <li>시각적 트리거로 인한 휴먼 인터랙션 제어: Top-view 영상 구석에 매핑된 색상 사각형(우측: 빨강 / 좌측: 파랑)을 활용해, 사람과의 상호작용 결과에 따라 목표 위치(Place)를 정확히 정렬하는 판단 알고리즘 구현</li>
+                <li>ACT 기반 고효율·정밀 제어: 거대 VLA 모델 대비 데이터와 학습 시간 최적화와 동시에, Jittering 없는 정밀 실시간 제어</li>
               </ul>
             </article>
 
             <article class="feature-card">
-              <h2 class="section-title">감정 분석 기반 고객 유치</h2>
+              <h2 class="section-title">객체 추적 기반 고객 추종</h2>
               <div class="visual-multi">
-                <div class="placeholder">
-                  <span>[시연 이미지1.png]</span>
-                </div>
-                <div class="placeholder">
-                  <span>[시연 이미지2.png]</span>
-                </div>
+                <img src="assets/tracking_viz.png" alt="실시간 객체 추적 모니터링 화면">
+                <img src="assets/follow_demo.png" alt="1인 추종 실주행 시연">
               </div>
               <ul>
-                <li>YOLOv8n + BoT-SORT로 사람 bbox와 ID를 안정적으로 추적</li>
-                <li>DBSCAN으로 고객 군집을 찾고 중심 좌표 기반 PD 제어로 접근</li>
-                <li>FaceLandmarker blendshape를 V-A 모델에 매핑해 감정 분석</li>
+                <li>DBSCAN으로 군집화해 고객 무리를 탐지</li>
+                <li>ArcFace 얼굴 임베딩 재식별로 추적이 끊겨도 동일 고객을 복구</li>
+                <li>추적 좌표를 거리 비례 PD 제어로 변환해 ROS2 기반 실로봇 추종 주행</li>
               </ul>
             </article>
           </div>
