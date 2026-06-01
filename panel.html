@@ -18,18 +18,18 @@
       --line-strong: #9aa8bd;
       --placeholder: #f8fafc;
       --dark: #1f2a44;
-      --section-title-size: 38px;
-      --section-title-line: 1.1;
+      --section-title-size: 50px;
+      --section-title-line: 1.05;
       --section-title-weight: 900;
-      --section-title-marker-width: 10px;
-      --section-title-marker-height: 36px;
-      --copy-size: 21px;
-      --copy-line: 1.5;
-      --copy-weight: 500;
-      --detail-size: 21px;
-      --detail-line: 1.34;
-      --detail-weight: 600;
-      --placeholder-text-size: 19px;
+      --section-title-marker-width: 13px;
+      --section-title-marker-height: 48px;
+      --copy-size: 29px;
+      --copy-line: 1.34;
+      --copy-weight: 650;
+      --detail-size: 29px;
+      --detail-line: 1.22;
+      --detail-weight: 650;
+      --placeholder-text-size: 25px;
       --placeholder-text-line: 1.3;
       --placeholder-text-weight: 800;
     }
@@ -82,7 +82,7 @@
       border-radius: 0;
       padding: 34px 38px;
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+      grid-template-columns: minmax(0, 1.12fr) minmax(520px, 0.88fr);
       gap: 40px;
       align-items: center;
     }
@@ -96,7 +96,7 @@
     .eyebrow {
       margin: 0;
       color: #c6d9ff;
-      font-size: 28px;
+      font-size: 32px;
       line-height: 1.15;
       font-weight: 800;
       letter-spacing: 0;
@@ -106,7 +106,7 @@
     h1 {
       margin: 0;
       color: #ffffff;
-      font-size: 112px;
+      font-size: 126px;
       line-height: 0.88;
       letter-spacing: 0;
       font-weight: 900;
@@ -121,8 +121,8 @@
     }
 
     .team {
-      border-left: 6px solid var(--primary);
-      padding: 8px 0 8px 24px;
+      border-left: 8px solid var(--primary);
+      padding: 20px 0 20px 34px;
       align-self: center;
       color: #e8eefc;
     }
@@ -130,15 +130,15 @@
     .team strong {
       display: block;
       color: #ffffff;
-      font-size: 31px;
+      font-size: 44px;
       line-height: 1.15;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     .team p {
       margin: 0;
-      font-size: 22px;
-      line-height: 1.5;
+      font-size: 32px;
+      line-height: 1.35;
       font-weight: 650;
       color: #d8e2f5;
     }
@@ -168,7 +168,7 @@
       padding: 12px 10px;
       background: var(--dark);
       color: #ffffff;
-      font-size: 24px;
+      font-size: 27px;
       line-height: 1.12;
       font-weight: 900;
       text-align: center;
@@ -214,7 +214,7 @@
       background: transparent;
       border: 0;
       color: var(--text);
-      font-size: 36px;
+      font-size: 39px;
       line-height: 1;
       font-weight: 900;
     }
@@ -227,7 +227,7 @@
 
     .tech-badge.compact {
       min-height: 54px;
-      font-size: 25px;
+      font-size: 28px;
       letter-spacing: 0;
     }
 
@@ -235,14 +235,14 @@
       display: grid;
       grid-template-columns: 0.92fr 1.08fr;
       gap: 26px;
+      height: 3100px;
       min-height: 0;
     }
 
     .left-sidebar,
     .right-sidebar {
       display: grid;
-      gap: 58px;
-      align-content: start;
+      height: 3100px;
       min-height: 0;
     }
 
@@ -251,8 +251,9 @@
       border: 0;
       border-radius: 0;
       padding: 24px;
-      gap: 46px;
-      align-content: start;
+      padding-top: 60px;
+      gap: 100px;
+      align-content: flex-start;
       grid-template-rows: none;
     }
 
@@ -261,7 +262,9 @@
       border: 0;
       border-radius: 0;
       padding: 24px;
-      gap: 58px;
+      padding-top: 60px;
+      grid-template-rows: 1fr;
+      align-content: flex-start;
     }
 
     .left-sidebar .section,
@@ -287,7 +290,7 @@
     }
 
     .section-title {
-      margin: 0 0 24px;
+      margin: 0 0 30px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -331,7 +334,7 @@
 
     .overview-image {
       width: 100%;
-      height: 560px;
+      height: 420px;
       display: block;
       object-fit: cover;
       object-position: center;
@@ -384,8 +387,8 @@
 
     li {
       margin: 8px 0;
-      font-size: 23px;
-      line-height: 1.42;
+      font-size: 30px;
+      line-height: 1.26;
       font-weight: 600;
     }
 
@@ -406,7 +409,7 @@
       overflow: hidden;
       background: var(--paper);
       display: grid;
-      grid-template-rows: 72px 260px minmax(102px, auto);
+      grid-template-rows: 80px 180px minmax(132px, auto);
     }
 
     .robot-name {
@@ -415,7 +418,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--line);
       color: var(--text);
-      font-size: 27px;
+      font-size: 30px;
       line-height: 1.1;
       font-weight: 900;
       text-align: center;
@@ -428,13 +431,13 @@
 
     .robot-kind {
       color: var(--secondary);
-      font-size: 17px;
+      font-size: 19px;
       line-height: 1.12;
       font-weight: 900;
     }
 
     .robot-copy {
-      padding: 18px 20px;
+      padding: 14px 18px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -548,7 +551,7 @@
       background: var(--secondary-soft);
       border: 1px solid var(--line);
       border-radius: 0;
-      font-size: 18px;
+      font-size: 21px;
       line-height: 1.28;
       font-weight: 900;
       text-align: center;
@@ -561,19 +564,19 @@
     .scenario-flow {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 34px;
+      gap: 26px;
       align-items: center;
     }
 
     .scenario-step {
-      min-height: 118px;
+      min-height: 110px;
       padding: 0;
       border: 0;
       border-radius: 0;
       background: transparent;
       display: grid;
-      grid-template-rows: 82px 58px;
-      gap: 10px;
+      grid-template-rows: 70px 56px;
+      gap: 8px;
       align-content: start;
       justify-items: center;
       position: relative;
@@ -584,7 +587,7 @@
       content: "→";
       position: absolute;
       left: calc(100% + 8px);
-      top: 32px;
+      top: 26px;
       transform: translateX(-50%);
       color: var(--secondary);
       font-size: 36px;
@@ -605,7 +608,7 @@
       align-self: stretch;
       width: 100%;
       min-width: 0;
-      font-size: 24px;
+      font-size: 27px;
       line-height: 1.1;
       font-weight: 900;
       color: var(--text);
@@ -616,7 +619,7 @@
 
     .scenario-icon {
       width: 100%;
-      height: 82px;
+      height: 70px;
       object-fit: contain;
       border: 0;
       background: transparent;
@@ -648,11 +651,11 @@
     .feature-grid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, minmax(0, 1fr));
-      gap: 22px;
-      height: 100%;
+      grid-template-rows: repeat(5, auto);
+      gap: 60px;
+      height: 3052px;
       min-height: 0;
-      align-content: stretch;
+      align-content: flex-start;
     }
 
     .feature-card {
@@ -661,8 +664,8 @@
       padding: 0;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto minmax(0, 1fr) auto;
-      row-gap: 8px;
+      grid-template-rows: auto auto auto;
+      row-gap: 12px;
       align-items: start;
       overflow: hidden;
     }
@@ -681,7 +684,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      font-size: 29px;
+      font-size: 40px;
       line-height: 1.1;
       font-weight: 900;
     }
@@ -691,7 +694,7 @@
       background: var(--secondary);
       color: #ffffff;
       border-radius: 0;
-      font-size: 16px;
+      font-size: 22px;
       line-height: 1;
       font-weight: 900;
       white-space: nowrap;
@@ -700,7 +703,7 @@
     .feature-card .section-title {
       grid-column: 1;
       grid-row: 1;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
 
     .feature-card .visual-multi {
@@ -722,10 +725,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
       gap: 10px;
-      height: 100%;
+      height: auto;
       min-height: 0;
       overflow: hidden;
-      align-items: stretch;
+      align-items: start;
     }
 
     .visual-multi--flow {
@@ -753,7 +756,7 @@
     .visual-multi--flow .flow-caption {
       flex: 0 0 auto;
       text-align: center;
-      font-size: 17px;
+      font-size: 23px;
       line-height: 1.25;
       font-weight: 800;
       color: var(--text);
@@ -764,7 +767,7 @@
     .visual-multi--flow .flow-arrow {
       flex: 0 0 auto;
       align-self: center;
-      padding-bottom: calc(8px + 17px * 1.25 * 2);
+      padding-bottom: calc(8px + 23px * 1.25 * 2);
       font-size: 36px;
       font-weight: 900;
       line-height: 1;
@@ -773,16 +776,17 @@
 
     .visual-multi--quad {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: minmax(0, 1fr);
       gap: 8px;
-      height: 100%;
+      height: auto;
       overflow: hidden;
     }
 
     .visual-multi--quad .quad-item {
       position: relative;
       margin: 0;
+      aspect-ratio: 4 / 3;
       min-width: 0;
       min-height: 0;
       overflow: hidden;
@@ -802,7 +806,7 @@
       padding: 4px 11px;
       background: rgba(0, 0, 0, 0.66);
       color: #ffffff;
-      font-size: 21px;
+      font-size: 27px;
       line-height: 1;
       font-weight: 900;
       border-radius: 8px;
@@ -810,7 +814,7 @@
     }
 
     .map-legend {
-      margin-left: 24px;
+      margin-left: 16px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -825,7 +829,7 @@
     }
 
     .legend-label {
-      font-size: 16px;
+      font-size: 22px;
       line-height: 1;
       font-weight: 800;
       color: var(--text);
@@ -859,7 +863,8 @@
 
     .visual-multi img {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 360px;
       min-width: 0;
       min-height: 0;
       display: block;
@@ -877,31 +882,33 @@
 
     .visual-multi > div > img {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 350px;
       min-height: 0;
       display: block;
       object-fit: contain;
     }
 
     .visual-multi--serving {
-      height: 100%;
+      height: auto;
     }
 
     .visual-multi--serving > div > img {
-      flex: 1 1 auto;
+      flex: 0 0 auto;
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 350px;
       min-height: 0;
       object-fit: contain;
       background: transparent;
     }
 
     .visual-multi--attraction {
-      height: 100%;
+      height: auto;
     }
 
     .visual-multi--attraction img {
-      height: 100%;
+      height: auto;
       object-fit: contain;
     }
 
@@ -909,7 +916,7 @@
       flex: 0 0 auto;
       margin: 4px 0 0;
       text-align: center;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 800;
       color: var(--dark);
     }
@@ -920,13 +927,13 @@
     }
 
     .feature-card ul {
-      padding-left: 22px;
+      padding-left: 26px;
       align-self: start;
       margin: 0;
     }
 
     .feature-card li {
-      margin: 5px 0;
+      margin: 4px 0;
     }
 
     .feature-card .placeholder strong {
@@ -1027,16 +1034,18 @@
       }
 
       .team {
-        border-left-width: 4px;
-        padding-left: 18px;
+        border-left-width: 6px;
+        padding: 14px 0 14px 22px;
       }
 
       .team strong {
-        font-size: 25px;
+        font-size: 30px;
+        margin-bottom: 12px;
       }
 
       .team p {
-        font-size: 19px;
+        font-size: 23px;
+        line-height: 1.35;
       }
 
       .tech-group {
@@ -1291,6 +1300,19 @@
               <ul>
                 <li>MediaPipe FaceLandmarker로 얼굴 특징을 추출하여 2차원 좌표로 감정 점수화</li>
                 <li>Russell V-A 모델 기반 감정을 분석해 게임 NPC식 퍼널로 단계적으로 친밀도 형성</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <h2 class="section-title">객체 추적 기반 고객 추종</h2>
+              <div class="visual-multi">
+                <img src="assets/tracking_viz.png" alt="실시간 객체 추적 모니터링 화면">
+                <img src="assets/follow_demo.png" alt="1인 추종 실주행 시연">
+              </div>
+              <ul>
+                <li>DBSCAN으로 군집화해 고객 무리를 탐지</li>
+                <li>ArcFace 얼굴 임베딩 재식별로 추적이 끊겨도 동일 고객을 복구</li>
+                <li>추적 좌표를 거리 비례 PD 제어로 변환해 ROS2 기반 실로봇 추종 주행</li>
               </ul>
             </article>
           </div>
