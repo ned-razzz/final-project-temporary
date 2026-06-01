@@ -572,7 +572,7 @@
       border: 0;
       padding: 0;
       display: grid;
-      grid-template-rows: auto 212px auto;
+      grid-template-rows: auto auto auto;
       gap: 12px;
     }
 
@@ -615,8 +615,6 @@
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
       gap: 10px;
       min-height: 0;
-      height: 100%;
-      overflow: hidden;
     }
 
     .visual-multi--flow {
@@ -644,12 +642,24 @@
     .robot-block > img,
     .visual-multi img {
       width: 100%;
-      height: 100%;
-      max-height: 212px;
+      height: auto;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       border: 0;
       padding: 0;
+    }
+
+    .visual-multi > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .visual-multi > div > p {
+      margin: 4px 0 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--dark);
     }
 
     .feature-card ul {
@@ -954,13 +964,20 @@
             <article class="feature-card">
               <h2 class="section-title">서빙 모방학습 (PickAndPlace)</h2>
               <div class="visual-multi">
-                <img src="assets/demo/serve_1.png" alt="서빙 모방학습 시연 1">
-                <img src="assets/demo/serve_2.png" alt="서빙 모방학습 시연 2">
+                <div>
+                  <img src="assets/demo/serve_1.png" alt="서빙 모방학습 시연 1">
+                  <p>픽업</p>
+                </div>
+                <div>
+                  <img src="assets/demo/serve_2.png" alt="서빙 모방학습 시연 2">
+                  <p>서빙</p>
+                </div>
               </div>
               <ul>
-                <li>환경·위치 강건성 확보: 데이터 증강으로 형광등 플리커(Flicker) 노이즈 극복, 다양한 위치에서 수집된 데이터셋을 기반으로 물체 위치 변화에 대응</li>
-                <li>시각적 트리거로 인한 휴먼 인터랙션 제어: Top-view 영상 구석에 매핑된 색상 사각형(우측: 빨강 / 좌측: 파랑)을 활용해, 사람과의 상호작용 결과에 따라 목표 위치(Place)를 정확히 정렬하는 판단 알고리즘 구현</li>
-                <li>ACT 기반 고효율·정밀 제어: 거대 VLA 모델 대비 데이터와 학습 시간 최적화와 동시에, Jittering 없는 정밀 실시간 제어</li>
+                <li>데이터 증강으로 형광등 플리커(Flicker) 노이즈 극복</li>
+                <li>다양한 위치에서 수집된 데이터셋을 기반으로 물체 위치 변화에 대응</li>
+                <li>Human Interaction의 결과에 따라 목표 위치(Place)에 정확히 place</li>
+                <li>거대 VLA 모델 대비 데이터와 학습 시간 최적화 & Jittering 없는 제어</li>
               </ul>
             </article>
 
