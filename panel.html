@@ -61,7 +61,8 @@
 
     .poster {
       width: 2419px;
-      min-height: 3426px;
+      height: 3426px;
+      min-height: 0;
       padding: 34px;
       background: var(--paper);
       display: grid;
@@ -624,8 +625,9 @@
 
     .feature-section {
       height: 100%;
+      min-height: 0;
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: 1fr;
     }
 
     .feature-head {
@@ -645,9 +647,12 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 38px;
-      align-content: start;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, minmax(0, 1fr));
+      gap: 22px;
+      height: 100%;
+      min-height: 0;
+      align-content: stretch;
     }
 
     .feature-card {
@@ -655,8 +660,11 @@
       border: 0;
       padding: 0;
       display: grid;
-      grid-template-rows: auto auto auto;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      row-gap: 8px;
+      align-items: start;
+      overflow: hidden;
     }
 
     .feature-card:first-child {
@@ -689,6 +697,23 @@
       white-space: nowrap;
     }
 
+    .feature-card .section-title {
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: 0;
+    }
+
+    .feature-card .visual-multi {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: stretch;
+    }
+
+    .feature-card ul {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
     .feature-card:nth-child(odd) h3 span {
       background: var(--primary);
     }
@@ -700,6 +725,7 @@
       height: 100%;
       min-height: 0;
       overflow: hidden;
+      align-items: stretch;
     }
 
     .visual-multi--flow {
@@ -748,20 +774,23 @@
     .visual-multi--quad {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
       gap: 8px;
-      height: auto;
-      overflow: visible;
+      height: 100%;
+      overflow: hidden;
     }
 
     .visual-multi--quad .quad-item {
       position: relative;
       margin: 0;
       min-width: 0;
+      min-height: 0;
+      overflow: hidden;
     }
 
     .visual-multi--quad .quad-item img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
       object-fit: contain;
     }
@@ -848,29 +877,31 @@
 
     .visual-multi > div > img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      min-height: 0;
       display: block;
+      object-fit: contain;
     }
 
     .visual-multi--serving {
-      height: auto;
+      height: 100%;
     }
 
     .visual-multi--serving > div > img {
-      flex: 0 0 auto;
+      flex: 1 1 auto;
       width: 100%;
-      height: auto;
-      max-height: none;
+      height: 100%;
+      min-height: 0;
       object-fit: contain;
       background: transparent;
     }
 
     .visual-multi--attraction {
-      height: auto;
+      height: 100%;
     }
 
     .visual-multi--attraction img {
-      height: auto;
+      height: 100%;
       object-fit: contain;
     }
 
@@ -967,6 +998,8 @@
 
       .poster {
         padding: 18px;
+        height: auto;
+        min-height: auto;
         overflow: visible;
         -webkit-transform: none;
         transform: none;
@@ -977,6 +1010,11 @@
       .hardware-grid,
       .feature-grid {
         grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-rows: none;
+        height: auto;
       }
 
       .header {
@@ -1028,7 +1066,14 @@
       }
 
       .feature-card {
-        grid-template-rows: auto 360px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+      }
+
+      .feature-card .visual-multi,
+      .feature-card ul {
+        grid-column: 1;
+        grid-row: auto;
       }
 
       .system-image {
@@ -1235,19 +1280,6 @@
                 <li>다양한 위치에서 수집된 데이터셋을 기반으로 물체 위치 변화에 대응</li>
                 <li>Human Interaction의 결과에 따라 목표 위치(Place)에 정확히 place</li>
                 <li>ACT: 거대 VLA 모델 대비 데이터와 학습 시간 최적화 & Jittering 없는 제어</li>
-              </ul>
-            </article>
-
-            <article class="feature-card">
-              <h2 class="section-title">객체 추적 기반 고객 추종</h2>
-              <div class="visual-multi">
-                <img src="assets/tracking_viz.png" alt="실시간 객체 추적 모니터링 화면">
-                <img src="assets/follow_demo.png" alt="1인 추종 실주행 시연">
-              </div>
-              <ul>
-                <li>DBSCAN으로 군집화해 고객 무리를 탐지</li>
-                <li>ArcFace 얼굴 임베딩 재식별로 추적이 끊겨도 동일 고객을 복구</li>
-                <li>추적 좌표를 거리 비례 PD 제어로 변환해 ROS2 기반 실로봇 추종 주행</li>
               </ul>
             </article>
 
