@@ -207,6 +207,18 @@
       font-weight: 900;
     }
 
+    .tech-items.manufacturing-stack {
+      grid-auto-columns: auto;
+      grid-template-columns: 1.2fr 0.9fr 0.78fr 1.2fr;
+      gap: 12px;
+    }
+
+    .tech-badge.compact {
+      min-height: 54px;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
     .main-grid {
       display: grid;
       grid-template-columns: 0.92fr 1.08fr;
@@ -605,6 +617,28 @@
       min-height: 0;
     }
 
+    .visual-multi--flow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .visual-multi--flow img {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .visual-multi--flow .flow-arrow {
+      flex: 0 0 auto;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--secondary);
+    }
+
     .robot-block > img,
     .visual-multi img {
       width: 100%;
@@ -799,8 +833,8 @@
                 <strong>뚜비 로봇 사진</strong>
               </div>
               <div class="robot-copy">
-                <p>OpenArm 양팔 로봇</p>
-                <p>요리 담당</p>
+                <p>OpenArm 양팔 로봇 + Depth 카메라</p>
+                <p>Vision 기반 제조 담당</p>
               </div>
             </article>
           </div>
@@ -827,9 +861,11 @@
             </article>
             <article class="tech-group">
               <h3>제조</h3>
-              <div class="tech-items">
+              <div class="tech-items manufacturing-stack">
                 <img class="tech-logo wide" src="assets/logo/openarm.png" alt="OpenArm">
                 <img class="tech-logo" src="assets/logo/moveit.png" alt="MoveIt">
+                <img class="tech-logo" src="assets/logo/Gazebo_logo.svg.png" alt="Gazebo">
+                <img class="tech-logo wide" src="assets/logo/ultralytics_yolo.svg" alt="Ultralytics YOLO">
               </div>
             </article>
             <article class="tech-group">
@@ -878,15 +914,36 @@
         <section class="section feature-section">
           <div class="feature-grid">
             <article class="feature-card">
-              <h2 class="section-title">SLAM 기반 협소 공간 주행</h2>
+              <h2 class="section-title">Vision 기반 양팔 제조 제어</h2>
               <div class="visual-multi">
                 <div class="placeholder">
-                  <span>[시연 이미지1.png]</span>
+                  <span>[Vision 기반 제조 시연 이미지1.png]</span>
+                </div>
+                <div class="placeholder">
+                  <span>[Vision 기반 제조 시연 이미지2.png]</span>
                 </div>
               </div>
               <ul>
-                <li>내용1</li>
-                <li>내용2</li>
+                <li>Depth 카메라 기반 Vision 처리로 식재료와 물품의 위치·회전 정보를 인식하고 엔드 이펙터 goal pose를 갱신</li>
+                <li>MoveIt planning과 Cartesian path를 조합해 파지, 접근, 배치 경로를 생성하고 제조 동작을 제어</li>
+                <li>양팔 협응 제어로 핫도그 조립, 케첩 도포, 음료 전달을 수행하고, 완성품을 픽업존에 안정적으로 배치</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <h2 class="section-title">SLAM 기반 협소 공간 주행</h2>
+              <div class="visual-multi visual-multi--flow">
+                <img src="assets/demo/slam_4.png" alt="SLAM 협소 공간 주행 시연 1">
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <img src="assets/demo/slam_3.png" alt="SLAM 협소 공간 주행 시연 2">
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <img src="assets/demo/slam_2.png" alt="SLAM 협소 공간 주행 시연 3">
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <img src="assets/demo/slam_1.png" alt="SLAM 협소 공간 주행 시연 4">
+              </div>
+              <ul>
+                <li>폴리곤 풋프린트 기반 충돌 평가 : 로봇을 원형으로 근사하지 않고 실제 다각형 외형 그대로 충돌을 계산 → 좁은 통로에서 차체 모서리까지 고려한 정밀 주행</li>
+                <li>실시간 라이다 반영 : 사전 지도에 없는 장애물도 현재 코스트맵 기준으로 매 사이클 재계획 → 동적·돌발 장애물에 즉각 회피</li>
               </ul>
             </article>
 
