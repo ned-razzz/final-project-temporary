@@ -694,10 +694,9 @@
     }
 
     .visual-multi--flow .flow-item img {
-      flex: 1 1 0;
-      min-height: 0;
       width: 100%;
       height: auto;
+      display: block;
       object-fit: contain;
     }
 
@@ -715,6 +714,7 @@
     .visual-multi--flow .flow-arrow {
       flex: 0 0 auto;
       align-self: center;
+      padding-bottom: calc(8px + 17px * 1.25 * 2);
       font-size: 36px;
       font-weight: 900;
       line-height: 1;
