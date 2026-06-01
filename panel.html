@@ -52,15 +52,26 @@
       justify-content: center;
     }
 
-    .poster {
+    .poster-frame {
       width: 1500px;
-      min-height: calc(1500px * 841 / 594);
+      height: 2123.74px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .poster {
+      width: 2419px;
+      min-height: 3426px;
       padding: 34px;
       background: var(--paper);
       display: grid;
       grid-template-rows: auto 1fr;
       gap: 26px;
       overflow: visible;
+      -webkit-transform: scale(0.62);
+      -webkit-transform-origin: top left;
+      transform: scale(0.62);
+      transform-origin: top left;
     }
 
     .header {
@@ -239,7 +250,7 @@
       border: 0;
       border-radius: 0;
       padding: 24px;
-      gap: 64px;
+      gap: 46px;
       align-content: start;
       grid-template-rows: none;
     }
@@ -319,9 +330,10 @@
 
     .overview-image {
       width: 100%;
-      height: auto;
+      height: 560px;
       display: block;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: center;
     }
 
     .overview-summary {
@@ -393,7 +405,7 @@
       overflow: hidden;
       background: var(--paper);
       display: grid;
-      grid-template-rows: 72px 318px minmax(116px, auto);
+      grid-template-rows: 72px 260px minmax(102px, auto);
     }
 
     .robot-name {
@@ -633,8 +645,8 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 56px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 38px;
       align-content: start;
     }
 
@@ -929,10 +941,9 @@
         background: #ffffff;
       }
 
-      .poster {
+      .poster-frame {
         width: 1500px;
-        height: calc(1500px * 841 / 594);
-        min-height: calc(1500px * 841 / 594);
+        height: 2123.74px;
         overflow: hidden;
         box-shadow: none;
       }
@@ -943,12 +954,22 @@
         display: block;
       }
 
+      .poster-frame,
       .poster {
         width: 100%;
         height: auto;
         min-height: auto;
+      }
+
+      .poster-frame {
+        overflow: visible;
+      }
+
+      .poster {
         padding: 18px;
         overflow: visible;
+        -webkit-transform: none;
+        transform: none;
       }
 
       .header,
@@ -1017,6 +1038,7 @@
   </style>
 </head>
 <body>
+  <div class="poster-frame">
   <main class="poster">
     <header class="header">
       <div class="header-main">
@@ -1244,5 +1266,6 @@
       </aside>
     </div>
   </main>
+  </div>
 </body>
 </html>

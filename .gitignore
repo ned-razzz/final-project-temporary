@@ -1,7 +1,4 @@
-*
-!.gitignore
-!panel.html
-!assets/
-!assets/**/
-!assets/**
-!scripts/**
+판넬 참고자료/
+panels/
+etc/
+doc/
