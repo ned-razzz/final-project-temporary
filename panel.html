@@ -619,24 +619,93 @@
 
     .visual-multi--flow {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       gap: 8px;
     }
 
-    .visual-multi--flow img {
+    .visual-multi--flow .flow-item {
       flex: 1 1 0;
       min-width: 0;
-      width: auto;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .visual-multi--flow .flow-item img {
+      flex: 1 1 0;
+      min-height: 0;
+      width: 100%;
       height: auto;
       object-fit: contain;
     }
 
+    .visual-multi--flow .flow-caption {
+      flex: 0 0 auto;
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: var(--text);
+      overflow-wrap: keep-all;
+      word-break: keep-all;
+    }
+
     .visual-multi--flow .flow-arrow {
       flex: 0 0 auto;
+      align-self: center;
       font-size: 36px;
       font-weight: 900;
       line-height: 1;
       color: var(--secondary);
+    }
+
+    .map-legend {
+      margin-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+      flex: 0 0 auto;
+    }
+
+    .map-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legend-label {
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .legend-goal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 23px;
+      background: #000000;
+      flex: 0 0 auto;
+    }
+
+    .legend-goal::before {
+      content: "";
+      width: 20px;
+      height: 9px;
+      background: #ff1a1a;
+    }
+
+    .legend-path {
+      display: inline-block;
+      width: 38px;
+      height: 7px;
+      border-radius: 4px;
+      background: #ff1a1a;
+      flex: 0 0 auto;
     }
 
     .robot-block > img,
@@ -932,15 +1001,38 @@
             </article>
 
             <article class="feature-card">
-              <h2 class="section-title">SLAM 기반 협소 공간 주행</h2>
+              <h2 class="section-title">SLAM 기반 협소 공간 주행
+                <span class="map-legend" aria-label="지도 범례">
+                  <span class="map-legend-item">
+                    <span class="legend-goal"></span>
+                    <span class="legend-label">도착지</span>
+                  </span>
+                  <span class="map-legend-item">
+                    <span class="legend-path"></span>
+                    <span class="legend-label">경로</span>
+                  </span>
+                </span>
+              </h2>
               <div class="visual-multi visual-multi--flow">
-                <img src="assets/demo/slam_4.png" alt="SLAM 협소 공간 주행 시연 1">
+                <figure class="flow-item">
+                  <img src="assets/demo/slam_4.png" alt="SLAM 협소 공간 주행 시연 1">
+                  <figcaption class="flow-caption">장애물 감지 및 경로 생성</figcaption>
+                </figure>
                 <span class="flow-arrow" aria-hidden="true">→</span>
-                <img src="assets/demo/slam_3.png" alt="SLAM 협소 공간 주행 시연 2">
+                <figure class="flow-item">
+                  <img src="assets/demo/slam_3.png" alt="SLAM 협소 공간 주행 시연 2">
+                  <figcaption class="flow-caption">좁은 통로 주행 시작</figcaption>
+                </figure>
                 <span class="flow-arrow" aria-hidden="true">→</span>
-                <img src="assets/demo/slam_2.png" alt="SLAM 협소 공간 주행 시연 3">
+                <figure class="flow-item">
+                  <img src="assets/demo/slam_2.png" alt="SLAM 협소 공간 주행 시연 3">
+                  <figcaption class="flow-caption">좁은 통로 주행 마무리</figcaption>
+                </figure>
                 <span class="flow-arrow" aria-hidden="true">→</span>
-                <img src="assets/demo/slam_1.png" alt="SLAM 협소 공간 주행 시연 4">
+                <figure class="flow-item">
+                  <img src="assets/demo/slam_1.png" alt="SLAM 협소 공간 주행 시연 4">
+                  <figcaption class="flow-caption">도착지 접근</figcaption>
+                </figure>
               </div>
               <ul>
                 <li>로봇을 실제 다각형 외형 그대로 충돌을 계산 → 좁은 통로에서 정밀 주행</li>
