@@ -675,7 +675,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
       gap: 10px;
+      height: 100%;
       min-height: 0;
+      overflow: hidden;
     }
 
     .visual-multi--flow {
@@ -771,7 +773,9 @@
 
     .visual-multi img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
       display: block;
       object-fit: contain;
       border: 0;
@@ -781,14 +785,27 @@
     .visual-multi > div {
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    .visual-multi > div > img {
+      flex: 1 1 0;
+      height: auto;
     }
 
     .visual-multi > div > p {
+      flex: 0 0 auto;
       margin: 4px 0 0;
       text-align: center;
       font-size: 18px;
       font-weight: 800;
       color: var(--dark);
+    }
+
+    .visual-multi.visual-multi--manufacturing img {
+      object-fit: contain;
+      background: var(--placeholder);
     }
 
     .feature-card ul {
@@ -1061,13 +1078,9 @@
           <div class="feature-grid">
             <article class="feature-card">
               <h2 class="section-title">Vision 기반 양팔 제조 제어</h2>
-              <div class="visual-multi">
-                <div class="placeholder">
-                  <span>[Vision 기반 제조 시연 이미지1.png]</span>
-                </div>
-                <div class="placeholder">
-                  <span>[Vision 기반 제조 시연 이미지2.png]</span>
-                </div>
+              <div class="visual-multi visual-multi--manufacturing">
+                <img src="assets/demo/openarm.jpg" alt="Vision 기반 제조 시연 OpenArm">
+                <img src="assets/demo/gazebo.png" alt="Vision 기반 제조 시연 Gazebo">
               </div>
               <ul>
                 <li>Depth 카메라 기반 Vision 처리로 식재료와 물품의 위치·회전 정보를 인식하고 엔드 이펙터 goal pose를 갱신</li>
